@@ -30,8 +30,8 @@ public class MediaInfoUtil {
 		throw new IOException("[Error] process exit status: "+ status);
 	}
 	
-	public static MediaInfo getMediaInfo (final String mediaPath) throws IOException, InterruptedException {
-		return MediaInfo.parse(MediaInfoUtil.executeMediaInfo(mediaPath)); 	
+	public static MediaInfo getMediaInfo (Node<String> fileNode) throws IOException, InterruptedException {
+		return MediaInfo.parse(MediaInfoUtil.executeMediaInfo(fileNode.getData()));
 	}
 	
 	public static String getMediainfoPath() {
