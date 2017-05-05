@@ -15,5 +15,7 @@ public class Main {
 		FileTree filetree = new FileTree(mediaPath);
 		// here we run mediainfo on the given path, and print the result (print may be huge if directory is big)
 		filetree.iterate_on_files(filetree.getRoot(), properties);	
+		
+		MediaGui mediagui = new MediaGui();
 	}
 }
